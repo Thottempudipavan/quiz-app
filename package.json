@@ -2,6 +2,7 @@
   "name": "quiz-app",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://Thottempudipavan.github.io/quiz-app",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
