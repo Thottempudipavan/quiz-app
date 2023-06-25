@@ -1,0 +1,141 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+
+  /* Nav styles */
+  nav.navbar {
+    background-color: teal !important;
+
+    .navbar-brand {
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .main-container {
+    margin: 20px auto;
+
+    .count-dropdown {
+      max-width: 250px;
+      border-radius: 0;
+    }
+
+    .quiz-preview {
+      margin: 20px auto;
+    }
+
+    .card {
+      border: none;
+      border-radius: 0;
+
+      .card-header {
+        border-radius: 0;
+        background-color: #615323d6;
+        color: white;
+        font-size: 17px;
+      }
+
+      .card-title {
+        font-size: 16px;
+      }
+
+      hr {
+        margin-top: 0;
+      }
+    }
+
+    .alert {
+      border-radius: 0;
+      border: none;
+      text-align: center;
+
+      .alert-heading {
+        margin-bottom: 30px;
+      }
+
+      .gap-2 {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    .quiz-review {
+      .card-header {
+        background-color: transparent;
+        color: teal;
+        padding-left: 0;
+        border: none;
+      }
+    }
+
+    .isSelect {
+      margin-left: 5px;
+    }
+  }
+
+  /* Timer styles */
+  .timer-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .timer {
+    font-family: "Montserrat";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text {
+    color: #aaa;
+  }
+
+  .value {
+    font-size: 38px;
+  }
+}
+
+button {
+  border-radius: 0 !important;
+  background-color: teal !important;
+  border-color: teal !important;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #cfbcbc0f !important;
+    color: teal !important;
+  }
+}
+
+button.btn-secondary {
+  background-color: #004ea1d6 !important;
+  border-color: #004ea1d6 !important;
+
+  &:hover {
+    background-color: #cfbcbc0f !important;
+    border-color: #004ea1d6 !important;
+    color: #004ea1d6 !important;
+  }
+
+}
