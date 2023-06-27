@@ -32,7 +32,7 @@ const QuizAppSection = () => {
   const handleClick = async () => {
     try {
       const { data } = await fetch(
-        `https://https://pkumar-07071990-hlmrnfk6ta-uc.a.run.app/getquestions?count=${selectionCount}`
+        `https://pkumar-07071990-hlmrnfk6ta-uc.a.run.app/getquestions?count=${selectionCount}`
       ).then((res) => res.json());
       // const { data } = await fetch(
       //   `http://localhost:8080/getquestions?count=${selectionCount}`
