@@ -29,7 +29,9 @@ const QuestionItem: FC<QuestionItemProps> = (props) => {
       if (index === answer_index) {
         if (valueIndex === answer_index) {
           return (
-            <SuccessText>{item} - Yahh! You choose right answer</SuccessText>
+            <SuccessText>
+              {item} - Yahh! You choose the right answer
+            </SuccessText>
           );
         }
         return (
@@ -40,7 +42,7 @@ const QuestionItem: FC<QuestionItemProps> = (props) => {
         );
       } else if (value === item && valueIndex !== answer_index) {
         return (
-          <DangerText>{item} - Ohhh!!! You Choose Wrong answer</DangerText>
+          <DangerText>{item} - Ohhh!!! You choose the wrong answer</DangerText>
         );
       }
       return item;
@@ -87,7 +89,7 @@ const QuestionItem: FC<QuestionItemProps> = (props) => {
         })}
         <p className="isSelect">
           {selectedOption.valueIndex < 0 && isPreview && (
-            <DangerText> oops!!! You didnot choose the answer</DangerText>
+            <DangerText> oops!!! You didnot choose any option</DangerText>
           )}
         </p>
       </Card.Body>

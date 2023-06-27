@@ -29,11 +29,18 @@ const QuizAppSection = () => {
   const { loading } = quizItems;
   const presentQuestion: questionType = quizItems.data[currentItemIdx];
 
-  const handleClick = () => {
-    const selectedArray: any[] = questions.filter(
-      (_val, i: number) => selectionCount > i
-    );
-    setquizItems({ data: getRandomQuestions(selectedArray), loading: false });
+  const handleClick = async () => {
+    try {
+      const { data } = await fetch(
+        "https://pkumar-07071990-hlmrnfk6ta-uc.a.run.app/getquestions"
+      ).then((res) => res.json());
+      setquizItems({ data: getRandomQuestions(data), loading: false });
+    } catch (_err) {
+      const selectedArray: any[] = questions.filter(
+        (_val, i: number) => selectionCount > i
+      );
+      setquizItems({ data: getRandomQuestions(selectedArray), loading: false });
+    }
   };
 
   const handleQuestionSubmit = ({
