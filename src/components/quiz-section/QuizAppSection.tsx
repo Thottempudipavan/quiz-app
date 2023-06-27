@@ -31,10 +31,13 @@ const QuizAppSection = () => {
 
   const handleClick = async () => {
     try {
+      // const { data } = await fetch(
+      //   "https://pkumar-07071990-hlmrnfk6ta-uc.a.run.app/getquestions"
+      // ).then((res) => res.json());
       const { data } = await fetch(
-        "https://pkumar-07071990-hlmrnfk6ta-uc.a.run.app/getquestions"
+        `http://localhost:8080/getquestions?count=${selectionCount}`
       ).then((res) => res.json());
-      setquizItems({ data: getRandomQuestions(data), loading: false });
+      setquizItems({ data: data, loading: false });
     } catch (_err) {
       const selectedArray: any[] = questions.filter(
         (_val, i: number) => selectionCount > i

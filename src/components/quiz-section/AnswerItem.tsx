@@ -45,13 +45,11 @@ const AnswerItem: FunctionComponent<AnswerItemProps> = ({
   };
 
   const handleSubmit = () => {
-    setTimeout(() => {
-      onSubmit({
-        isCorrect: selectedOption.valueIndex === answer,
-        selectedOption,
-        index: currentItemIdx,
-      });
-    }, 1000);
+    onSubmit({
+      isCorrect: selectedOption.valueIndex === answer,
+      selectedOption,
+      index: currentItemIdx,
+    });
   };
 
   useEffect(() => {
@@ -65,7 +63,9 @@ const AnswerItem: FunctionComponent<AnswerItemProps> = ({
       setStage("error");
     } else if (timeRemaining === 0) {
       setStage("info");
-      handleSubmit();
+      setTimeout(() => {
+        handleSubmit();
+      }, 1000);
     }
 
     return () => clearTimeout(timer);
